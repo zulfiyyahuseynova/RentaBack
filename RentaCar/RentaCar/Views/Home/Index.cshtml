@@ -1,0 +1,163 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section class="container col-12 d-flex align-items-end pt-5 h-100">
+        <div class="left col-8 text-white">
+            <h1>FIND YOUR RENT A CAR</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="right col-4">
+            <img src="~/assets/imgs/form.png" alt="">
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="header text-center mt-5 mb-5">
+            <h2>OUR BEST <span>OFFERS</span></h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a arcu eu justo euismod rutrum.
+                Quisque id enim ac tortor malesuada vestibulum non quis turpis.
+                Ut eget ornare arcu. Suspendisse velit mi, pulvinar sed mauris eget, efficitur tempor ex.
+            </p>
+        </div>
+        <div class="content d-flex col-12">
+            <div class="left-content col-4">
+                <div class="d-flex mb-5 gap-3">
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-5 gap-3">
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-5 gap-3">
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-content col-4">
+                <img src="~/assets/imgs/middle-content.jfif" alt="">
+            </div>
+            <div class="right-content col-4">
+                <div class="d-flex mb-5 gap-3">
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                </div>
+                <div class="d-flex mb-5 gap-3">
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                </div>
+                <div class="d-flex mb-5 gap-3">
+                    <div class="text">
+                        <h3>Featured Luxury Cars</h3>
+                        <p>Lorem ipsum dolor sit amet, onsectetuer adipiscing elitcommodo ligula eget dolor.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="bi bi-bag-dash-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="header text-center mt-5 mb-5">
+            <h2>VEHICLE MODELS<span> FOR RENT</span></h2>
+        </div>
+        <div class="content col-12 d-flex">
+            <div class="left-content col-3">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>@item.Name</li>
+                        <hr>
+                    }
+                </ul>
+            </div>
+            <div class="middle-content col-6">
+                @foreach (var item in Model)
+                {
+                    <img src="~/assets/imgs/@item.Image" alt="">
+
+                }
+            </div>
+            <div class="right-content col-3">
+                @foreach (var item in Model)
+                {
+                    <ul>
+                        <li>$ 37.40 Rent Per Day</li>
+                        <hr>
+                        <li>Model @item.Model</li>
+                        <hr>
+                        <li>Doors @item.DoorCount</li>
+                        <hr>
+                        <li>Seats @item.SeatCount</li>
+                        <hr>
+                        <li>Luggage @item.Luggage</li>
+                        <hr>
+                        <li>Transmission @item.Transmission</li>
+                        <hr>
+                        <li>Air conditioning @item.AirConditioning</li>
+                        <hr>
+                        <li>Minimum age @item.MinAge years</li>
+                    </ul>
+                }
+
+                <button type="button" class="btn btn-primary">Reserve now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-4 pt-4 pb-4 mb-5">
+        <div class="container d-flex">
+            <div class="cardd col-3">
+                <i class="bi bi-people-fill"></i>
+                <h2>399</h2>
+                <p>Happy Client</p>
+            </div>
+            <div class="cardd col-3">
+                <i class="bi bi-award"></i>
+                <h2>499</h2>
+                <p>Cars</p>
+            </div>
+            <div class="cardd col-3">
+                <i class="bi bi-laptop"></i>
+                <h2>572</h2>
+                <p>Project Finished</p>
+            </div>
+            <div class="cardd col-3">
+                <i class="bi bi-award"></i>
+                <h2>206</h2>
+                <p>Awards</p>
+            </div>
+        </div>
+    </section>
+</main>
